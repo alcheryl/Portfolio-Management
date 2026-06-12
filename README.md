@@ -11,41 +11,31 @@ Both funds started with a notional capital of **USD 50 million** and were manage
 
 ## Repository Contents
 
-### `Active Fund Calculation Code.ipynb`
+### `Active_Fund_Calculation_Code.ipynb`
+Python code for the **Active Fund**. This notebook covers:
+- Portfolio construction of 14 large-cap value stocks across 7 sectors (Financials, Energy, Healthcare, Industrials, Consumer Staples, Utilities, Communication Services).
+- Application of the **Black-Litterman model with Absolute Views** to optimize portfolio weights by maximizing the Sharpe ratio.
+- Simulation of the portfolio rebalancing event on October 29, 2025.
+- Calculation of performance metrics: annualized return, volatility, Sharpe ratio, Treynor ratio, Jensen's Alpha, Information ratio, and Maximum Drawdown.
+- **Performance attribution** using the Brinson framework (allocation, selection, and interaction effects).
+- Style exposure analysis (large-cap value classification).
 
-This notebook contains the complete implementation of the active portfolio strategy, including:
-
-* Data collection and preprocessing.
-* Macroeconomic and sector analysis inputs.
-* Stock selection based on a Large-Cap Value philosophy.
-* Black-Litterman portfolio optimization.
-* Portfolio rebalancing analysis.
-* Performance attribution.
-* Risk and return evaluation.
-
-### `Passive Fund Calculation Code.ipynb`
-
-This notebook contains the implementation of the passive portfolio strategy, including:
-
-* DJIA full-replication portfolio construction.
-* Benchmark tracking methodology.
-* Tracking error and tracking difference calculations.
-* DJIA futures overlay implementation.
-* Portfolio monitoring and rebalancing.
-* Performance comparison against the benchmark.
+### `Passive_Fund_Calculation_Code.ipynb`
+Python code for the **Passive Fund**. This notebook covers:
+- Portfolio construction via **full replication** of all 30 DJIA constituents, purchasing an equal number of shares per ticker in line with the index's price-weighted methodology.
+- Calculation of the **hedge ratio** and number of E-Mini DJIA Futures contracts required to offset cash drag from the 5% cash reserve.
+- Simulation of semi-annual rebalancing and dividend reinvestment.
+- **Tracking error** monitoring relative to the DJIA benchmark.
+- Calculation of key metrics: NAV, cumulative return, beta, Sharpe ratio, Maximum Drawdown, and tracking difference.
+- Performance breakdown between the equity portfolio component and the futures & cash component.
 
 ### `Report.pdf`
-
-The final investment report summarizing the entire fund management process, including:
-
-* Investment Policy Statements (IPS).
-* Market and macroeconomic outlook.
-* Active and passive portfolio construction methodologies.
-* Rebalancing decisions and rationale.
-* DJIA futures hedging strategy.
-* Performance and risk evaluation.
-* Performance attribution analysis.
-* Reflections, limitations, and key findings.
+AG Capital's professional investment report, comprising:
+- **Investment Policy Statement (IPS):** investment objectives, strategies, asset allocation policy, and rebalancing policy for both funds.
+- **Portfolio Construction:** U.S. macroeconomic analysis (CPI, Fed policy, GDP, PMI), sector and stock selection rationale for the active fund, and full replication methodology for the passive fund.
+- **Monitoring & Rebalancing:** monthly performance tracking, market-driven rebalancing decisions, and application of DJIA Index Futures.
+- **Performance & Risk Evaluation:** comprehensive assessment of both funds using risk-adjusted metrics and performance attribution analysis.
+- **Conclusions & Limitations:** critical reflection on active versus passive management effectiveness, methodological constraints, and proposed improvements.
 
 ## Disclaimer
 
